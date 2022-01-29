@@ -6,25 +6,23 @@ import MovieCard from '../MovieCard';
 
 import './styles.scss';
 
-const APIKey = '&api_key=0566763322f997e45d892d670c45d60c';
-const url = '/discover/movie?sort_by=popularity.desc';
+const APIKey = process.env.REACT_APP_API_KEY;
+const url = process.env.REACT_APP_URL_POPULAR;
 
 const PopularMovies = () => {
   const [movieData, setMovieData] = useState([]);
-  const [urlSet, setUrl] = useState(url);
 
   useEffect(() => {
     api.get(`${url}${APIKey}`).then((data) => {
       setMovieData(data.data.results);
-      // console.log(movieData);
     });
-  }, [urlSet]);
+  }, []);
 
   const breakPoints = [
     { width: 1, itemToShow: 1 },
     { width: 550, itemToShow: 2, itemToScrol: 2 },
     { width: 768, itemToShow: 3 },
-    { width: 1368, itemToShow: 6 },
+    { width: 1368, itemToShow: 4 },
   ];
 
   return (
