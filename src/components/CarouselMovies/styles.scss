@@ -1,0 +1,48 @@
+.lcUbOd {
+}
+
+.carousel-movies {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-left: 6rem;
+    margin-bottom: 2rem;
+  }
+
+  .cyan {
+    color: var(--cyan-500);
+  }
+
+  .yellow {
+    color: var(--yellow-500);
+  }
+}
+
+.carousel-wrapper {
+  width: 98vw;
+
+  .rec-arrow {
+    text-align: center;
+    box-shadow: none;
+    font-size: 2rem;
+    color: var(--white-500);
+    background: transparent;
+
+    &:hover:enabled {
+      background-color: transparent;
+      box-shadow: none;
+      color: var(--cyan-500);
+    }
+
+    &:disabled {
+      color: var(--cyan-900);
+      background: transparent;
+    }
+  }
+}

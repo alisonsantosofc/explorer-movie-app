@@ -1,5 +1,5 @@
 footer {
-  margin-top: 1rem;
+  padding: 0.5rem 0;
   text-align: center;
 
   a {
@@ -8,11 +8,11 @@ footer {
     text-decoration: none;
 
     &:hover {
-      color: #1190ff;
+      color: #71d1b4;
     }
 
     &:active {
-      color: #007cec;
+      color: #3bb892;
     }
   }
 }
