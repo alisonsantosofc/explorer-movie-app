@@ -1,0 +1,16 @@
+.top-movies {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #1d1d1d;
+
+  h1 {
+    font-size: 1.8rem;
+    margin-left: 4%;
+    margin-bottom: 4rem;
+    color: #dbc549;
+  }
+}

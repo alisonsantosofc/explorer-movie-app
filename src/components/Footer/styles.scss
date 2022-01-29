@@ -1,0 +1,18 @@
+footer {
+  margin-top: 1rem;
+  text-align: center;
+
+  a {
+    color: #5c5c5c;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      color: #1190ff;
+    }
+
+    &:active {
+      color: #007cec;
+    }
+  }
+}

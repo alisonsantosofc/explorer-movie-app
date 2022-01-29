@@ -1,0 +1,15 @@
+.popular-movies {
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  h1 {
+    font-size: 2.2rem;
+    margin-left: 4%;
+    margin-bottom: 4rem;
+    color: #71d1b4;
+  }
+}
