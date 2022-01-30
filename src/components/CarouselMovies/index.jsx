@@ -9,14 +9,12 @@ const CarouselMovies = ({ title, items, slug }) => {
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 3, itemsToScrol: 2 },
-    { width: 768, itemsToShow: 4, itemsToScrol: 3 },
-    { width: 1368, itemsToShow: 6, itemsToScrol: 3 },
+    { width: 768, itemsToShow: 4 },
+    { width: 1368, itemsToShow: 6 },
   ];
 
   const carouselClass =
     title === 'Em cartaz' ? 'primary-title' : 'secondary-title';
-
-  console.log(carouselClass);
 
   return (
     <section className="carousel-movies">
