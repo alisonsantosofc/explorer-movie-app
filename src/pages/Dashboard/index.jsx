@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import apiTmdb from '../../services/apiTmdb';
+import { getMovieList } from '../../services/apiTmdb';
 
 import CarouselMovies from '../../components/CarouselMovies';
 
@@ -11,7 +11,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     const loadMovies = async () => {
-      const list = await apiTmdb.getMovieList();
+      const list = await getMovieList();
 
       setMovieList(list);
     };

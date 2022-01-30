@@ -9,30 +9,28 @@ const basicFetch = async (endpoint) => {
   return json;
 };
 
-export default {
-  getMovieList: async () => {
-    return [
-      {
-        slug: 'trending',
-        title: 'Em cartaz',
-        items: await basicFetch(
-          `/trending/movie/week?language=pt-BR&api_key=${apiKey}`
-        ),
-      },
-      {
-        slug: 'toprated',
-        title: 'Mais Votados',
-        items: await basicFetch(
-          `/movie/top_rated?language=pt-BR&api_key=${apiKey}`
-        ),
-      },
-      {
-        slug: 'popular',
-        title: 'Popular',
-        items: await basicFetch(
-          `/movie/popular?language=pt-BR&api_key=${apiKey}`
-        ),
-      },
-    ];
-  },
+export const getMovieList = async () => {
+  return [
+    {
+      slug: 'trending',
+      title: 'Em cartaz',
+      items: await basicFetch(
+        `/trending/movie/week?language=pt-BR&api_key=${apiKey}`
+      ),
+    },
+    {
+      slug: 'toprated',
+      title: 'Mais Votados',
+      items: await basicFetch(
+        `/movie/top_rated?language=pt-BR&api_key=${apiKey}`
+      ),
+    },
+    {
+      slug: 'popular',
+      title: 'Popular',
+      items: await basicFetch(
+        `/movie/popular?language=pt-BR&api_key=${apiKey}`
+      ),
+    },
+  ];
 };

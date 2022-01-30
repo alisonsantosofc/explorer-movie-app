@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-modal';
 
 import optionsDate from '../../config/date.config';
@@ -8,8 +8,7 @@ import './styles.scss';
 Modal.setAppElement('#root');
 
 const Movie = ({ info }) => {
-  const { title, id, overview, backdrop_path, poster_path, release_date } =
-    info;
+  const { title, overview, backdrop_path, poster_path, release_date } = info;
 
   const [modalIsOpen, setIsOpen] = useState(false);
 
