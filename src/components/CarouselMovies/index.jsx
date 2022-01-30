@@ -5,9 +5,7 @@ import MovieCard from '../MovieCard';
 
 import './styles.scss';
 
-const CarouselMovies = (props) => {
-  const { sectionTitle, titleClass } = props;
-
+const CarouselMovies = ({ title, items, slug }) => {
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 3, itemsToScrol: 2 },
@@ -15,13 +13,20 @@ const CarouselMovies = (props) => {
     { width: 1368, itemsToShow: 6, itemsToScrol: 3 },
   ];
 
+  const carouselClass =
+    title === 'Em cartaz' ? 'primary-title' : 'secondary-title';
+
+  console.log(carouselClass);
+
   return (
     <section className="carousel-movies">
-      <h1 className={titleClass}>{sectionTitle}</h1>
+      <h1 className={carouselClass}>{title}</h1>
       <div className="container">
         <div className="carousel-wrapper">
           <Carousel breakPoints={breakPoints} pagination={false}>
-            <div>Movie</div>
+            {items.results.map((item, key) => (
+              <MovieCard key={key} info={item} />
+            ))}
           </Carousel>
         </div>
       </div>

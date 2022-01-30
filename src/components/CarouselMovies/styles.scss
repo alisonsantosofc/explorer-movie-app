@@ -6,17 +6,17 @@
   align-items: flex-start;
 
   h1 {
-    font-size: 2.2rem;
     font-weight: 500;
     margin-left: 6rem;
     margin-bottom: 2rem;
   }
 
-  .cyan {
+  .primary-title {
+    font-size: 2.2rem;
     color: var(--cyan-500);
   }
-
-  .yellow {
+  .secondary-title {
+    font-size: 1.8rem;
     color: var(--yellow-500);
   }
 }

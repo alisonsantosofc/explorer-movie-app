@@ -3,8 +3,10 @@ const apiKey = '0566763322f997e45d892d670c45d60c';
 
 const basicFetch = async (endpoint) => {
   const request = await fetch(`${baseUrl}${endpoint}`);
+  const response = await request.text();
+  const json = await JSON.parse(response);
 
-  return request.json();
+  return json;
 };
 
 export default {
@@ -21,14 +23,14 @@ export default {
         slug: 'toprated',
         title: 'Mais Votados',
         items: await basicFetch(
-          `movie/top_rated?language=pt-BR&api_key=${apiKey}`
+          `/movie/top_rated?language=pt-BR&api_key=${apiKey}`
         ),
       },
       {
         slug: 'popular',
         title: 'Popular',
         items: await basicFetch(
-          `movie/popular?language=pt-BR&api_key=${apiKey}`
+          `/movie/popular?language=pt-BR&api_key=${apiKey}`
         ),
       },
     ];

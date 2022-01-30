@@ -1,7 +1,7 @@
-const options = {
+const optionsDate = {
   day: 'numeric',
   month: 'long',
   year: 'numeric',
 };
 
-export default options;
+export default optionsDate;

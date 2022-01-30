@@ -1,15 +1,29 @@
 import React, { useEffect, useState } from 'react';
 
+import apiTmdb from '../../services/apiTmdb';
+
 import CarouselMovies from '../../components/CarouselMovies';
 
 import './styles.scss';
 
 const Dashboard = () => {
+  const [movieList, setMovieList] = useState([]);
+
+  useEffect(() => {
+    const loadMovies = async () => {
+      const list = await apiTmdb.getMovieList();
+
+      setMovieList(list);
+    };
+
+    loadMovies();
+  }, []);
+
   return (
     <main>
-      <CarouselMovies sectionTitle="Em Cartaz" titleClass="cyan" />
-      <CarouselMovies sectionTitle="Janeiro/2022" titleClass="yellow" />
-      <CarouselMovies sectionTitle="Dezembro/2021" titleClass="yellow" />
+      {movieList.map((item, key) => (
+        <CarouselMovies key={key} title={item.title} items={item.items} />
+      ))}
     </main>
   );
 };

@@ -1,8 +1,9 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 
-import Routes from './routes';
+import Dashboard from './pages/Dashboard';
 import Footer from './components/Footer';
+
+import apiTmdb from './services/apiTmdb';
 
 import './scss/global.scss';
 import './scss/responsive.scss';
@@ -10,9 +11,7 @@ import './scss/responsive.scss';
 const App = () => {
   return (
     <>
-      <Router>
-        <Routes />
-      </Router>
+      <Dashboard />
       <Footer />
     </>
   );
