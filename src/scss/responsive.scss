@@ -35,8 +35,8 @@
         width: 80vw;
         height: 50vh;
         bottom: 0;
-        margin-bottom: 1rem;
-        margin-right: 10%;
+        padding-bottom: 1rem;
+        margin: 0 10%;
       }
     }
   }
@@ -92,7 +92,9 @@
       }
 
       .movie-video {
+        width: 90vw;
         height: 30vh;
+        margin: 0 5%;
 
         .video-notfound {
           font-size: 5rem;
