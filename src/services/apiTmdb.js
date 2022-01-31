@@ -15,21 +15,21 @@ export const getMovieList = async () => {
       slug: 'trending',
       title: 'Em cartaz',
       items: await basicFetch(
-        `/trending/movie/week?language=pt-BR&api_key=${apiKey}`
+        `/trending/movie/week?language=pt-BR&api_key=${apiKey}&page=1`
       ),
     },
     {
       slug: 'currentyear',
       title: 'Janeiro/2022',
       items: await basicFetch(
-        `/discover/movie?api_key=${apiKey}&language=pt-BR&sort_by=release_date.desc&release_date.lte=2022&page=3`
+        `/discover/movie?api_key=${apiKey}&language=pt-BR&sort_by=release_date.desc&page=1&release_date.lte=2022`
       ),
     },
     {
       slug: 'lastyear',
       title: 'Dezembro/2021',
       items: await basicFetch(
-        `/discover/movie?api_key=${apiKey}&language=pt-BR&sort_by=release_date.desc&release_date.lte=2021&page=3`
+        `/discover/movie?api_key=${apiKey}&language=pt-BR&sort_by=release_date.desc&page=1&release_date.lte=2021`
       ),
     },
   ];
