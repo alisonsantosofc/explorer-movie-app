@@ -12,7 +12,7 @@ const MovieModal = (props) => {
   const [movieData, setMovieData] = useState({});
   const [movieVideo, setMovieVideo] = useState({});
 
-  useEffect(() => {
+  useEffect(async () => {
     const loadMovieInfo = async () => {
       const data = await getMovieInfo(movieId);
 
@@ -25,9 +25,8 @@ const MovieModal = (props) => {
       setMovieVideo(video);
     };
 
-    loadMovieInfo();
-    loadMovieVideo();
-    console.log(movieId);
+    await loadMovieInfo();
+    await loadMovieVideo();
   }, [movieId]);
 
   const {
