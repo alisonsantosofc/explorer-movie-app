@@ -32,10 +32,10 @@
       }
 
       .movie-video {
-        width: 60%;
+        width: 60vw;
         height: 48%;
         bottom: 0;
-        margin-right: 20%;
+        margin: 0 auto;
       }
     }
   }
@@ -62,9 +62,8 @@
         }
       }
       .movie-video {
-        width: 65%;
+        width: 65vw;
         height: 45%;
-        margin-right: 20%;
       }
     }
   }
@@ -87,7 +86,6 @@
       .movie-video {
         width: 90vw;
         height: 45%;
-        margin-right: 10%;
       }
     }
   }
