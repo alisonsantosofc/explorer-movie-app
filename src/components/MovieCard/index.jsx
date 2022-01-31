@@ -125,6 +125,7 @@ const Movie = ({ info }) => {
               className="movie-video"
               src={`https://www.youtube.com/embed/${listVideo[0]}`}
               frameBorder={0}
+              allowFullscreen
             ></iframe>
           ) : (
             <div className="movie-video">
