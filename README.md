@@ -1,5 +1,9 @@
 <div align="center">
-  <img src="" width="600px" alt="demo">
+  <img src="https://i.ibb.co/2jKqYST/backdrop-explorermovie.png" width="600px" alt="backdrop" />
+  <div>
+     <img src="https://i.ibb.co/MBFv8rV/demo-explorermovie.jpg" width="600px" alt="demo" />
+     <img src="https://i.ibb.co/khTCwv9/demo-explorermovie-mobile.jpg" height="300px" alt="demo" />
+  </div>
 </div>
 <br>
 
