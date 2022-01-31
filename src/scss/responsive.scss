@@ -35,7 +35,8 @@
         width: 60vw;
         height: 48%;
         bottom: 0;
-        margin: 0 auto;
+        margin-bottom: 1rem;
+        margin-right: 20%;
       }
     }
   }
@@ -53,7 +54,7 @@
         .movie-content {
           .title-container {
             button {
-              margin-right: 1rem;
+              margin-right: 0.5rem;
             }
           }
           dl {
@@ -64,6 +65,7 @@
       .movie-video {
         width: 65vw;
         height: 45%;
+        margin-right: 18%;
       }
     }
   }
@@ -84,8 +86,9 @@
         }
       }
       .movie-video {
-        width: 90vw;
+        width: 70vw;
         height: 45%;
+        margin-right: 15%;
       }
     }
   }
@@ -108,8 +111,9 @@
         }
       }
       .movie-video {
-        width: 80vw;
-        height: 30%;
+        width: 65vw;
+        height: 28%;
+        margin-right: 18%;
 
         .video-notfound {
           font-size: 6rem;
@@ -137,6 +141,10 @@
       }
 
       .movie-video {
+        width: 70vw;
+        height: 23%;
+        margin-right: 15%;
+
         .video-notfound {
           font-size: 5rem;
           margin-top: 4rem;
