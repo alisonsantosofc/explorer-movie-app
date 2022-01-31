@@ -28,17 +28,17 @@
 
 <div align="center" id="objective">
   <h1>Objective</h1>
-  <p>Create an application to explorer github repositories.</p>
+  <p>Create an application to explorer movie information from The Movie Database API.</p>
 </div>
 <br>
 
 <div align="center" id="starting">
   <h1>Starting</h1>
   <p>1.Clone the repository with the following command.</p>
-  <p><b>git clone https://github.com/alisonsantosofc/reactjs-movie-explorer</b></p>
+  <p><b>git clone https://github.com/alisonsantosofc/reactjs-explorer-movie-app</b></p>
 
   <p>2.Navigate to the project folder with the following command.</p>
-  <p><b>cd reactjs-movie-explorer-app</b></p>
+  <p><b>cd reactjs-explorer-movie-app</b></p>
 
   <p>3.Run this command to install dependencies.</p>
   <p><b>yarn</b></p>
