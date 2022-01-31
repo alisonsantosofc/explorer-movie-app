@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
-import { FaVideoSlash } from 'react-icons/fa';
+import { FaVideoSlash, FaChevronDown } from 'react-icons/fa';
 
 import { getMovieInfo, getMovieVideo } from '../../services/apiTmdb';
-import optionsDate from '../../config/date.config';
 
 import './styles.scss';
 
@@ -64,6 +63,12 @@ const Movie = ({ info }) => {
     movieGeners.push(genres[i].name);
   }
 
+  const optionsDate = {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  };
+
   const date = new Date(release_date);
   const releaseDate = date.toLocaleDateString('pt-br', optionsDate);
 
@@ -94,7 +99,12 @@ const Movie = ({ info }) => {
         <div className="modal-container">
           <div className="movie-info">
             <div className="movie-content">
-              <h2>{title}</h2>
+              <div className="title-container">
+                <h2>{title}</h2>
+                <button type="button" onClick={handleCloseModal}>
+                  <FaChevronDown />
+                </button>
+              </div>
 
               <p>{tagline}</p>
 
@@ -119,7 +129,7 @@ const Movie = ({ info }) => {
           ) : (
             <div className="movie-video">
               <FaVideoSlash className="video-notfound" />
-              <h2>Não encontramos nenhum video :(</h2>
+              <h3>Não encontramos nenhum video :(</h3>
             </div>
           )}
         </div>

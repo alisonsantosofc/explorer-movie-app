@@ -51,6 +51,11 @@
 
       .movie-info {
         .movie-content {
+          .title-container {
+            button {
+              margin-right: 1rem;
+            }
+          }
           dl {
             margin-top: 5rem;
           }
@@ -80,7 +85,7 @@
         }
       }
       .movie-video {
-        width: 80%;
+        width: 90vw;
         height: 45%;
         margin-right: 10%;
       }
@@ -91,10 +96,10 @@
 @media only screen and (max-width: 578px) {
   .movie-modal {
     img {
-      height: 45%;
+      height: 40%;
     }
     .modal-container {
-      height: 45%;
+      height: 40%;
 
       .movie-info {
         .movie-content {
@@ -105,9 +110,13 @@
         }
       }
       .movie-video {
-        width: 60%;
-        height: 25%;
-        margin-right: 20%;
+        width: 80vw;
+        height: 30%;
+
+        .video-notfound {
+          font-size: 6rem;
+          margin-top: 1rem;
+        }
       }
     }
   }
@@ -116,16 +125,23 @@
 @media only screen and (max-width: 478px) {
   .movie-modal {
     img {
-      height: 35%;
+      height: 30%;
     }
     .modal-container {
-      height: 35%;
+      height: 30%;
 
       .movie-info {
         .movie-content {
           h2 {
             font-size: 1.5rem;
           }
+        }
+      }
+
+      .movie-video {
+        .video-notfound {
+          font-size: 5rem;
+          margin-top: 4rem;
         }
       }
     }

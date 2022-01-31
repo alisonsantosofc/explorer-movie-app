@@ -71,8 +71,27 @@
         display: flex;
         flex-direction: column;
 
-        h2 {
+        .title-container {
+          display: flex;
+          justify-content: space-between;
           margin-bottom: 0.8rem;
+
+          button {
+            background-color: transparent;
+            border: 0;
+            color: var(--white-100);
+            font-size: 2.5rem;
+            margin-right: 6rem;
+            cursor: pointer;
+
+            &:hover {
+              color: var(--cyan-500);
+            }
+
+            &:active {
+              color: var(--cyan-700);
+            }
+          }
         }
 
         dl {
@@ -104,7 +123,7 @@
       margin: 1rem 0.5rem;
       position: absolute;
       right: 2%;
-      width: 38%;
+      width: 35%;
       height: 90%;
       border-radius: 0.5rem;
       text-align: center;
