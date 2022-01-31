@@ -22,14 +22,14 @@ export const getMovieList = async () => {
       slug: 'currentyear',
       title: 'Janeiro/2022',
       items: await basicFetch(
-        `/discover/movie?api_key=${apiKey}&language=pt-BR&sort_by=popularity.desc&release_date.lte=2022&page=3`
+        `/discover/movie?api_key=${apiKey}&language=pt-BR&sort_by=release_date.desc&release_date.lte=2022&page=3`
       ),
     },
     {
       slug: 'lastyear',
       title: 'Dezembro/2021',
       items: await basicFetch(
-        `/discover/movie?api_key=${apiKey}&language=pt-BR&sort_by=popularity.desc&release_date.lte=2021&page=3`
+        `/discover/movie?api_key=${apiKey}&language=pt-BR&sort_by=release_date.desc&release_date.lte=2021&page=3`
       ),
     },
   ];
