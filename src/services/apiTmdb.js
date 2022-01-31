@@ -19,17 +19,17 @@ export const getMovieList = async () => {
       ),
     },
     {
-      slug: 'toprated',
-      title: 'Mais Votados',
+      slug: 'currentyear',
+      title: 'Janeiro/2022',
       items: await basicFetch(
-        `/movie/top_rated?language=pt-BR&api_key=${apiKey}`
+        `/discover/movie?api_key=${apiKey}&language=pt-BR&sort_by=popularity.desc&release_date.lte=2022&page=3`
       ),
     },
     {
-      slug: 'popular',
-      title: 'Popular',
+      slug: 'lastyear',
+      title: 'Dezembro/2021',
       items: await basicFetch(
-        `/movie/popular?language=pt-BR&api_key=${apiKey}`
+        `/discover/movie?api_key=${apiKey}&language=pt-BR&sort_by=popularity.desc&release_date.lte=2021&page=3`
       ),
     },
   ];

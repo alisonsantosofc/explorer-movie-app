@@ -24,22 +24,33 @@
 .carousel-wrapper {
   width: 98vw;
 
-  .rec-arrow {
+  .rec.rec-arrow {
     text-align: center;
     box-shadow: none;
     font-size: 2rem;
     color: var(--white-500);
     background: transparent;
 
-    &:hover:enabled {
+    &:hover {
       background-color: transparent;
       box-shadow: none;
       color: var(--cyan-500);
     }
 
+    &:active {
+      color: var(--cyan-700);
+    }
+
     &:disabled {
       color: var(--cyan-900);
+      visibility: hidden;
       background: transparent;
+    }
+
+    &:focus {
+      outline: none;
+      background: none;
+      box-shadow: none;
     }
   }
 }
