@@ -41,3 +41,10 @@ export const getMovieInfo = async (movieId) => {
   );
   return info;
 };
+
+export const getMovieVideo = async (movieId) => {
+  const info = await basicFetch(
+    `/movie/${movieId}/videos?language=pt-BR&api_key=${apiKey}`
+  );
+  return info;
+};

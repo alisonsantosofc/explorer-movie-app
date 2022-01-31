@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
+import { FaVideoSlash } from 'react-icons/fa';
 
-import { getMovieInfo } from '../../services/apiTmdb';
+import { getMovieInfo, getMovieVideo } from '../../services/apiTmdb';
 import optionsDate from '../../config/date.config';
 
 import './styles.scss';
@@ -13,6 +14,7 @@ const Movie = ({ info }) => {
 
   const [modalIsOpen, setIsOpen] = useState(false);
   const [movieData, setMovieData] = useState({});
+  const [movieVideo, setMovieVideo] = useState({});
 
   useEffect(() => {
     const loadMovieInfo = async () => {
@@ -21,11 +23,17 @@ const Movie = ({ info }) => {
       setMovieData(data);
     };
 
+    const loadMovieVideo = async () => {
+      const video = await getMovieVideo(id);
+
+      setMovieVideo(video);
+    };
+
     loadMovieInfo();
+    loadMovieVideo();
   }, []);
 
   async function handleOpenModal() {
-    console.log(movieData);
     setIsOpen(true);
   }
 
@@ -42,6 +50,13 @@ const Movie = ({ info }) => {
     backdrop_path,
     release_date,
   } = movieData;
+
+  const listVideo = [];
+  const { results } = movieVideo;
+
+  for (let i in results) {
+    listVideo.push(results[i].key);
+  }
 
   const movieGeners = [];
 
@@ -76,23 +91,37 @@ const Movie = ({ info }) => {
           alt="Movie Background"
         />
 
-        <div className="movie-info">
-          <div className="movie-content">
-            <h2>{title}</h2>
+        <div className="modal-container">
+          <div className="movie-info">
+            <div className="movie-content">
+              <h2>{title}</h2>
 
-            <p>{tagline}</p>
+              <p>{tagline}</p>
 
-            <dl>
-              <dt className="yellow">Estréia:</dt>
-              <dd>{releaseDate}</dd>
-              <dt>Gênero:</dt>
-              <dd>{movieGeners.join(', ')}</dd>
-              <dt>Duração:</dt>
-              <dd>{runtime}min</dd>
-            </dl>
+              <dl>
+                <dt className="yellow">Estréia:</dt>
+                <dd>{releaseDate}</dd>
+                <dt>Gênero:</dt>
+                <dd>{movieGeners.join(', ')}</dd>
+                <dt>Duração:</dt>
+                <dd>{runtime}min</dd>
+              </dl>
 
-            <p className="movie-overview">{overview}</p>
+              <p className="movie-overview">{overview}</p>
+            </div>
           </div>
+          {listVideo[0] ? (
+            <iframe
+              className="movie-video"
+              src={`https://www.youtube.com/embed/${listVideo[0]}`}
+              frameBorder={0}
+            ></iframe>
+          ) : (
+            <div className="movie-video">
+              <FaVideoSlash className="video-notfound" />
+              <h2>Não encontramos nenhum video :(</h2>
+            </div>
+          )}
         </div>
       </Modal>
     </>

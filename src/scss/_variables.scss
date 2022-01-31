@@ -1,4 +1,6 @@
 :root {
+  --font-family: 'Montserrat', sans-serif;
+
   --cyan-500: #71d1b4;
   --cyan-800: #1e5847;
   --cyan-900: #397261;
@@ -8,5 +10,16 @@
   --white-100: #fff;
   --body-bg: #282828;
 
-  --font-family: 'Montserrat', sans-serif;
+  --gradient-bg: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.521) 0%,
+    rgb(12, 12, 12) 45%,
+    rgb(0, 0, 0) 100%
+  );
+  --gradient-responsive-bg: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.521) 0%,
+    rgb(12, 12, 12) 65%,
+    rgb(0, 0, 0) 100%
+  );
 }
