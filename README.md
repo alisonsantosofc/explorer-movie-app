@@ -1,46 +1,77 @@
-# Getting Started with Create React App
+<div align="center">
+  <img src="" width="600px" alt="demo">
+</div>
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Explorer Movie</h1>
+<p align="center">App project to explore movie information, developed for the UNID challenge</p>
 
-## Available Scripts
+<p align="center"><a href="https://explorermovie.netlify.app/">Click here to access the deploy</a></p>
+<br>
 
-In the project directory, you can run:
+<div align="center">
+  <span><img src="https://img.shields.io/badge/ReactJS-323330?style=for-the-badge&labelColor=080808&color=00B4FF&logo=react&logoColor=00B4FF"/></span>
+  <span><img src="https://img.shields.io/badge/Javascript-323330?style=for-the-badge&labelColor=080808&color=F7DF1E&logo=javascript&logoColor=F7DF1E"/></span>
+  <span><img src="https://img.shields.io/badge/Sass-323330?style=for-the-badge&labelColor=ffffff&color=E96DC9&logo=sass&logoColor=E96DC9"/></span>
+</div>
+<br>
+<br>
 
-### `npm start`
+<p align="center">
+  <a href="#objective"><b>Objective</b></a> •
+  <a href="#starting"><b>Starting</b></a> • 
+  <a href="#technologies"><b>Technologies</b></a> • 
+  <a href="#license"><b>License</b></a>
+</p>
+<br>
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<div align="center" id="objective">
+  <h1>Objective</h1>
+  <p>Create an application to explorer github repositories.</p>
+</div>
+<br>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<div align="center" id="starting">
+  <h1>Starting</h1>
+  <p>1.Clone the repository with the following command.</p>
+  <p><b>git clone https://github.com/alisonsantosofc/reactjs-movie-explorer</b></p>
 
-### `npm test`
+  <p>2.Navigate to the project folder with the following command.</p>
+  <p><b>cd reactjs-movie-explorer-app</b></p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  <p>3.Run this command to install dependencies.</p>
+  <p><b>yarn</b></p>
 
-### `npm run build`
+  <p>4.Start the project in development environment.</p>
+  <p><b>yarn start</b></p>
+</div>
+<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<div align="center" id="technologies">
+  <h1>Technologies</h1>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  <p><a href="https://pt-br.reactjs.org/"><b>React JS</b></a> - JavaScript Library</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  <p><a href="https://www.typescriptlang.org/"><b>JavaScript</b></a> - High Programming Language</p>
 
-### `npm run eject`
+  <p><a href="https://styled-components.com/docs"><b>Sass</b></a> - CSS Preprocessor</p>
+</div>
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<div align="center" id="license">
+  
+</div>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br>
+<div align="center" id="autor">
+  <h1>License</h1>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  <p>
+    <a href="https://opensource.org/licenses/MIT">
+      <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
+    </a>
+  </p>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+  <p>&copy; 2022 Developed by <b><a href="https://alisonsantosofc.github.io/alison-web-developer/">Alison Santos</a></b></p>
+</div>
