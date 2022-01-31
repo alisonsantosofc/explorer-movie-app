@@ -24,7 +24,7 @@ const Movie = ({ info }) => {
     <>
       <button type="button" className="movie" onClick={handleOpenModal}>
         <img
-          src={`https://image.tmdb.org/t/p/w300${poster_path}`}
+          src={`https://image.tmdb.org/t/p/w200${poster_path}`}
           alt="Movie Poster"
         />
 
