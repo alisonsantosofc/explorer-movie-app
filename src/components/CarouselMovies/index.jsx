@@ -5,7 +5,7 @@ import MovieCard from '../MovieCard';
 
 import './styles.scss';
 
-const CarouselMovies = ({ title, items, slug }) => {
+const CarouselMovies = ({ slug, title, items }) => {
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 3, itemsToScrol: 2 },
@@ -14,7 +14,7 @@ const CarouselMovies = ({ title, items, slug }) => {
   ];
 
   const carouselClass =
-    title === 'Em cartaz' ? 'primary-title' : 'secondary-title';
+    slug === 'trending' ? 'primary-title' : 'secondary-title';
 
   return (
     <section className="carousel-movies">

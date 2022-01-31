@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 
+import { getMovieInfo } from '../../services/apiTmdb';
 import optionsDate from '../../config/date.config';
 
 import './styles.scss';
@@ -8,20 +9,48 @@ import './styles.scss';
 Modal.setAppElement('#root');
 
 const Movie = ({ info }) => {
-  const { title, overview, backdrop_path, poster_path, release_date } = info;
+  const { id, poster_path } = info;
 
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [movieData, setMovieData] = useState({});
 
-  const date = new Date(release_date);
-  const releaseDate = date.toLocaleDateString('pt-br', optionsDate);
+  useEffect(() => {
+    const loadMovieInfo = async () => {
+      const data = await getMovieInfo(id);
 
-  function handleOpenModal() {
+      setMovieData(data);
+    };
+
+    loadMovieInfo();
+  }, []);
+
+  async function handleOpenModal() {
+    console.log(movieData);
     setIsOpen(true);
   }
 
   function handleCloseModal() {
     setIsOpen(false);
   }
+
+  const {
+    title,
+    tagline,
+    genres,
+    runtime,
+    overview,
+    backdrop_path,
+    release_date,
+  } = movieData;
+
+  const movieGeners = [];
+
+  for (let i in genres) {
+    movieGeners.push(genres[i].name);
+  }
+
+  const date = new Date(release_date);
+  const releaseDate = date.toLocaleDateString('pt-br', optionsDate);
 
   return (
     <>
@@ -51,15 +80,15 @@ const Movie = ({ info }) => {
           <div className="movie-content">
             <h2>{title}</h2>
 
-            <p>Detalhes do Filme</p>
+            <p>{tagline}</p>
 
             <dl>
               <dt className="yellow">Estréia:</dt>
               <dd>{releaseDate}</dd>
               <dt>Gênero:</dt>
-              <dd>Ação, Aventura, Comédia</dd>
+              <dd>{movieGeners.join(', ')}</dd>
               <dt>Duração:</dt>
-              <dd>155 min</dd>
+              <dd>{runtime}min</dd>
             </dl>
 
             <p className="movie-overview">{overview}</p>

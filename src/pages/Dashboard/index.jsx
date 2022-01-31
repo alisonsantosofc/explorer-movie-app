@@ -22,7 +22,12 @@ const Dashboard = () => {
   return (
     <main>
       {movieList.map((item, key) => (
-        <CarouselMovies key={key} title={item.title} items={item.items} />
+        <CarouselMovies
+          key={key}
+          slug={item.slug}
+          title={item.title}
+          items={item.items}
+        />
       ))}
     </main>
   );
