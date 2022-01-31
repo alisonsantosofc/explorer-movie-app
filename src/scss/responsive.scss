@@ -60,6 +60,13 @@
           }
           dl {
             margin-top: 5rem;
+            justify-content: center;
+
+            div {
+              flex-direction: column;
+              justify-content: space-between;
+              text-align: center;
+            }
           }
         }
       }

@@ -87,12 +87,20 @@ const MovieModal = (props) => {
             <p>{tagline}</p>
 
             <dl>
-              <dt className="yellow">Estréia:</dt>
-              <dd>{releaseDate}</dd>
-              <dt>Gênero:</dt>
-              <dd>{movieGeners.join(', ')}</dd>
-              <dt>Duração:</dt>
-              <dd>{runtime}min</dd>
+              <div>
+                <dt className="yellow">Estréia:</dt>
+                <dd>{releaseDate}</dd>
+              </div>
+
+              <div>
+                <dt>Gênero:</dt>
+                <dd>{movieGeners.join(', ')}</dd>
+              </div>
+
+              <div>
+                <dt>Duração:</dt>
+                <dd>{runtime}min</dd>
+              </div>
             </dl>
 
             <p className="movie-overview">{overview}</p>
