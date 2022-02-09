@@ -39,10 +39,10 @@
 <div align="center" id="starting">
   <h1>Starting</h1>
   <p>1.Clone the repository with the following command.</p>
-  <p><b>git clone https://github.com/alisonsantosofc/reactjs-explorer-movie-app</b></p>
+  <p><b>git clone https://github.com/alisonsantosofc/react-explorer-movie-app</b></p>
 
   <p>2.Navigate to the project folder with the following command.</p>
-  <p><b>cd reactjs-explorer-movie-app</b></p>
+  <p><b>cd react-explorer-movie-app</b></p>
 
   <p>3.Run this command to install dependencies.</p>
   <p><b>yarn</b></p>
